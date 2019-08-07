@@ -9,15 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var counter: Int = 0
+    
     var body: some View {
-        Text("Hello World")
+        VStack {
+           
+            Text("Total count is: \(String(counter))")
+                .font(.largeTitle)
+                .padding(20)
+            
+            Divider()
+            
+            HStack {
+                Button(action: {
+                    self.counter += 1
+                }, label:{
+                    Text("Add")
+                })
+                .padding(10)
+                
+                Button(action: {
+                    self.counter -= 1
+                }, label:{
+                    Text("Subtract")
+                })
+            }
+        }
     }
 }
 
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif

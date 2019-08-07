@@ -5,6 +5,7 @@
 //  Created by Shiju Varghese on 05/08/19.
 //  Copyright © 2019 Shiju Varghese. All rights reserved.
 //
+// Our new top level object in iOS 13 is a UIWindowScene!
 
 import UIKit
 import SwiftUI
